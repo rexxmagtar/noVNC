@@ -228,7 +228,7 @@ export default class Websock {
     }
 
     open(uri, protocols) {
-        this.attach(new WebSocket(uri, protocols));
+        this.attach(new WebSocket(uri,  ['binary', 'base64']));
     }
 
     attach(rawChannel) {
